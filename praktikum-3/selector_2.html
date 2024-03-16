@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selector</title>
+
+  <style>
+    a {
+      font-size: 50px;
+      text-decoration: none;
+    }
+
+    /* Dynamic Pseudo Class Selector */
+    a:hover {
+      color: cadetblue;
+      text-decoration: underline;
+    }
+
+    input {
+      width: 300px;
+      height: 30px;
+    }
+
+    /* Dynamic Pseudo Class Selector */
+    input:focus {
+      border: solid 2px orange;
+      outline: none;
+    }
+
+    /* State Pseudo Class Selector */
+    input:disabled {
+      border: solid 2px gray;
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: solid 1px black;
+      padding: 10px;
+    }
+
+    /* Structural Pseudo Class Selector */
+    tr:first-child {
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    tr:last-child {
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: right;
+      color: red;
+    }
+
+    tr:nth-child(odd) {
+      background-color: lightgrey
+    }
+
+    tr:nth-child(even) {
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="https://bif-sby.telkomuniversity.ac.id//">Informatika Telkom University Surabaya</a>
+
+  <p><input type="text"></p>
+  <p><input type="text" disabled value="Disabled"></p>
+
+  <table style="border: 1;">
+    <tr>
+      <td>Row</td>
+      <td>Row</td>
+      <td>Row</td>
+    </tr>
+    <tr>
+      <td>Row</td>
+      <td>Row</td>
+      <td>Row</td>
+    </tr>
+    <tr>
+      <td>Row</td>
+      <td>Row</td>
+      <td>Row</td>
+    </tr>
+    <tr>
+      <td>Row</td>
+      <td>Row</td>
+      <td>Row</td>
+    </tr>
+    <tr>
+      <td>Row</td>
+      <td>Row</td>
+      <td>Row</td>
+    </tr>
+    <tr>
+      <td>Row</td>
+      <td>Row</td>
+      <td>Row</td>
+    </tr>
+  </table>
+</body>
+
+</html>

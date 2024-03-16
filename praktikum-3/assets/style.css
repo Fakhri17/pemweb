@@ -1,0 +1,10 @@
+h1 {
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+p {
+    color: brown;
+    font-size: 20px;
+    text-decoration: line-through;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selector</title>
+
+  <style>
+    /* Universal Selector */
+    * {
+      color: brown;
+      background-color: bisque;
+    }
+
+    /* Element Selector */
+    h2 {
+      color: black;
+    }
+
+    /* Class Selector */
+    p.success {
+      color: green;
+    }
+
+    /* Id Selector */
+    p#danger {
+      color: red;
+    }
+
+    /* Attribute Selector */
+    a[href] {
+      font-size: 50px;
+    }
+
+    /* Group Selector */
+    h1,
+    h2,
+    p {
+      text-transform: uppercase;
+    }
+
+    /* Element Spesific Selector */
+    p.judul {
+      font-size: large;
+    }
+
+    span#important {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* Descendant Selector */
+    div p {
+      font-size: x-large;
+    }
+
+    /* Child Selector */
+    div>p {
+      color: cornflowerblue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>This is Heading One</h1>
+  <p>This is paragraph One</p>
+
+  <hr>
+
+  <h2 class="judul">This is Heading Two</h2>
+  <p>This is paragraph Two</p>
+
+  <hr>
+
+  <h3>This is Heading Two</h3>
+  <p class="success">Proses Registrasi Berhasil</p>
+
+  <hr>
+
+  <h4>This is Heading Four</h4>
+  <p id="danger">Proses Registrasi Gagal</p>
+
+  <hr>
+
+  <a>Link Non Aktif</a>
+  <a href="https://is.ittelkom-sby.ac.id/" target="_blank">Klik di sini</a>
+
+  <hr>
+
+  <p class="judul">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut vel, <span id="important">dolor</span>,
+    natus et quod perferendis voluptas nemo exercitationem perspiciatis necessitatibus velit sapiente minima. Pariatur
+    consectetur veniam accusantium sit earum dolorem.</p>
+
+  <hr>
+
+  <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam magnam obcaecati minima ipsam corrupti totam
+      quisquam iste explicabo in molestiae aperiam, sunt molestias dignissimos et praesentium facilis minus rem eveniet.
+    </p>
+    <section>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum nobis, debitis nihil cupiditate,
+        consequatur amet laudantium beatae totam placeat iure, laborum nostrum recusandae labore harum similique impedit
+        eum sint ea.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto optio adipisci odio! Iusto natus
+        temporibus laudantium quam placeat inventore voluptate minima sed quas. Hic quam aut odit. Animi, distinctio
+        modi!</p>
+    </section>
+  </div>
+</body>
+
+</html>

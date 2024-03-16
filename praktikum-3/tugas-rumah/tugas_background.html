@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas Background</title>
+
+  <style>
+    .py-5{
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    .container{
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .mb-3{
+      margin-bottom: 1rem;
+    }
+
+    .background-warna{
+      background-color: #e0e0e0;
+    }
+
+    .background-gambar{
+      background-image: url('../assets/strawberries.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+    }
+
+    .background-campuran{
+      background: url('../assets/strawberries.jpg') bottom right / 700px 400px no-repeat scroll padding-box content-box red;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <section class="py-5 background-warna mb-3">
+    <div class="container">
+      <h1>Background Warna</h1>
+    </div>
+  </section>
+
+  <section class="py-5 background-gambar mb-3">
+    <div class="container">
+      <h1 style="color: #fff;">Background Gambar</h1>
+    </div>
+  </section>
+
+  <section class="py-5 background-campuran mb-3">
+    <div class="container">
+      <h1 style="color: #fff;">Background Campuran</h1>
+    </div>
+  </section>
+</body>
+</html>

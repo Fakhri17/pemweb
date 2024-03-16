@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography</title>
+
+  <style>
+    h1 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 50px;
+      color: brown;
+      font-weight: lighter;
+      font-style: italic;
+    }
+
+    p {
+      text-decoration: underline;
+      text-transform: uppercase;
+      text-align: right;
+      line-height: 2;
+      letter-spacing: 10px;
+    }
+
+    p.persen {
+      font-size: 120%;
+    }
+
+    p.pixel {
+      font-size: 19.2px;
+    }
+
+    body {
+      font-size: 16px;
+    }
+
+    div {
+      font-size: 1.5em;
+    }
+
+    p.keyword {
+      color: blue;
+    }
+
+    p#rgb {
+      color: #fc4912;
+    }
+
+    p.rgb {
+      color: rgb(29, 191, 64);
+    }
+
+    p.rgba {
+      color: rgba(118, 52, 181, 0.313)
+    }
+
+    p.hsl {
+      color: hsl(60, 80%, 30%);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Pengenalan CSS Tingkat Dasar</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam perferendis maiores incidunt quaerat similique eum
+    nisi vero provident, voluptatem odio? Officia inventore facilis nemo! Asperiores nemo mollitia voluptates? Quam,
+    libero?</p>
+
+  <br><br><br>
+
+  <p>Paragraf normal (default)</p>
+  <p class="persen">Paragraf dengan ukuran 120%</p>
+  <p class="pixel">Paragraf dengan ukuran 19.2px</p>
+
+  <br><br><br>
+
+  <div>Child Element 1
+    <div>Child Element 2
+      <div>Child Element 3
+        <div>Child Element 4
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <p class="keyword">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem necessitatibus voluptatibus in
+    facilis autem perferendis unde voluptate reiciendis provident delectus dolorum aspernatur velit quia officiis
+    corrupti officia vitae, fugiat quis.</p>
+  <p id="rgb">Lorem ipsum dolor sit amet consectetur adipisicing elit. In quidem, consequatur, sunt quia, praesentium
+    iusto sint voluptatibus neque eaque quasi suscipit. Cumque harum aperiam fugit sunt atque quos repudiandae quisquam?
+  </p>
+  <p class="rgb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa obcaecati optio nostrum accusantium qui
+    alias commodi non minus in dolore, temporibus placeat explicabo nemo id pariatur sit sapiente doloremque
+    necessitatibus?</p>
+  <p class="rgba">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur et, delectus possimus nesciunt
+    nihil, atque laudantium alias id quibusdam, at vero fugiat harum labore ea beatae laborum quis molestiae voluptate!
+  </p>
+  <p class="hsl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa esse tempore laboriosam vitae
+    architecto? A minus mollitia, tempora dolor sit aliquid rerum nemo delectus nisi ipsa, porro, reprehenderit atque
+    aut.</p>
+</body>
+
+</html>
