@@ -1,0 +1,375 @@
+:root {
+  --main-color: #ffd95c;
+  --main-color-hover: #e6c34f;
+  --dark-color: #2b2b2b;
+  --container-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.button {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.3em;
+  padding: 0.7em 1.2em;
+  background-color: var(--main-color);
+  color: #464646;
+  border-radius: 30px;
+  font-size: 1.1em;
+}
+
+.button:hover {
+  background-color: var(--main-color-hover);
+  color: #2e2a2a;
+  transition: all 0.3s;
+}
+
+.nav-container {
+  background-color: var(--dark-color);
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+.nav-container header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  height: 60px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.nav-container .logo img {
+  width: 180px;
+  padding-top: 10px;
+}
+
+.nav-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-container li a {
+  display: block;
+  color: white;
+  padding: 0 1.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 60px;
+  line-height: 60px;
+}
+
+.nav-container li a:hover {
+  color: var(--main-color);
+  transition: all 0.3s;
+  border-bottom: 5px solid var(--main-color);
+}
+
+.nav-container header label,
+#hamburger {
+  display: none;
+}
+
+/* HERO */
+.hero-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+    url("images/bg.jpg");
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 4em;
+  color: var(--dark-color);
+}
+
+.hero-text p {
+  font-size: 2em;
+  margin: 0;
+  color: var(--dark-color);
+}
+/* END OF HERO */
+
+/* SHOWCASE */
+.showcase-container:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.showcase {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.showcase-image,
+.showcase-text {
+  width: 100%;
+  margin: 1em;
+}
+
+.showcase-image img {
+  width: 100%;
+  border: 1px solid silver;
+  padding: 0.3rem;
+}
+/* END OF SHOWCASE */
+
+/* BLOG */
+.blog-container {
+  max-width: var(--container-width);
+  margin: 3rem auto;
+}
+
+.blog-container header {
+  padding: 0 2em;
+  text-align: center;
+}
+
+.blog-container header hr {
+  width: 25%;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+.blog-index {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 2%;
+}
+
+.blog-index .snippet {
+  width: 32%;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+.blog-index .snippet-img {
+  width: 100%;
+}
+
+.blog-index .snippet-txt {
+  padding: 0 1em;
+}
+
+.blog-index .snippet-txt small {
+  color: #999;
+}
+/* END OF BLOG */
+
+/* FOOTER */
+.footer-container {
+  margin-top: 3rem;
+  color: white;
+  background-color: var(--dark-color);
+  padding: 2rem 1rem;
+}
+
+.footer-container hr {
+  color: #2e2a2a;
+}
+
+.footer-container a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+.footer-menu {
+  max-width: var(--container-width);
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.footer-menu section {
+  width: 23%;
+}
+
+.footer-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-menu h3 {
+  margin-top: 0;
+}
+
+.logo-container img {
+  width: 180px;
+}
+
+.footer-copyright {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.footer-copyright a {
+  margin-left: 0.5rem;
+}
+
+.footer-copyright a:hover {
+  text-decoration: none;
+}
+/* END OF FOOTER */
+
+/* BREAKPOINT TABLET */
+@media screen and (max-width: 768px) {
+  .nav-container header label {
+    display: inline-block;
+    color: white;
+    font-style: normal;
+    font-size: 2rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  .nav-container header {
+    width: 100%;
+  }
+
+  .nav-container nav ul {
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .nav-container li a {
+    display: block;
+    color: white;
+    background-color: var(--dark-color);
+    padding: 0 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: auto;
+  }
+
+  .nav-container li a:hover {
+    border-bottom: none;
+  }
+
+  .nav-container .logo {
+    position: absolute;
+    right: 0px;
+    z-index: 1000;
+  }
+
+  .nav-container .logo img {
+    width: 120px;
+  }
+
+  .nav-container nav {
+    display: none;
+  }
+
+  .nav-container header input:checked ~ nav {
+    display: flex;
+  }
+
+  .hero-text h1 {
+    font-size: 3em;
+  }
+
+  /* SHOWCASE */
+  .showcase {
+    flex-direction: column;
+    padding: 1em 2em;
+  }
+  .showcase-image,
+  .showcase-text {
+    width: auto;
+  }
+  /* END OF SHOWCASE */
+
+  .blog-index .snippet {
+    width: 100% !important;
+    margin: 1rem 2rem;
+  }
+
+  ​​/* FOOTER */
+.footer-container {
+    padding: 2rem;
+  }
+  .footer-menu section {
+    width: 48% !important;
+    margin-bottom: 2rem;
+  }
+  .footer-copyright div {
+    margin-bottom: 2rem;
+  }
+  .footer-copyright a:first-child {
+    margin-left: 0;
+  }
+  /* END OF FOOTER */
+}
+
+/* BREAKPOINT HANDPHONE */
+@media screen and (max-width: 481px) {
+  /* Kode CSS Di Sini */
+
+  /* BLOG */
+  .blog-container .snippet {
+    width: 98%;
+  }
+  .blog-index {
+    justify-content: center;
+  }
+  /* END OF BLOG */
+
+  /* FOOTER */
+  .footer-menu section {
+    width: 100% !important;
+    margin-bottom: 2rem;
+  }
+  /* END OF FOOTER */
+}
