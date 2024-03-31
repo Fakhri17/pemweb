@@ -1,0 +1,111 @@
+body {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #18181b;
+}
+
+.erase {
+	background-color: #fff;
+}
+
+input {
+	outline: none;
+}
+
+.calculator {
+	background-color: hsl(0, 0%, 12%);
+	overflow: hidden;
+	border-radius: 8px;
+	max-width: 370px;
+}
+
+.keys {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 3px;
+	padding: 5px;
+}
+
+.calculate {
+	display: flex;
+	font-size: 28px !important;
+	color: #fff;
+	align-items: center;
+	margin-left: -2px;
+}
+
+
+.clickable {
+	cursor: pointer;
+}
+
+.clickable:hover {
+	background-color: hsl(0, 0%, 20%) !important;
+}
+
+.red:hover {
+	background-color: hsl(0, 72%, 45%) !important;
+	cursor: pointer;
+}
+
+.topline {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 15px;
+	height: 80px;
+	font-size: 3.2rem;
+	text-align: right;
+	border: none;
+	background-color: hsl(0, 0%, 12%);
+	color: #fff;
+}
+
+.display {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 10px;
+	margin-left: -40px;
+	height: 70px;
+	font-size: 3.2rem;
+	text-align: right;
+	border: none;
+	background-color: hsl(0, 0%, 12%);
+	color: #fff;
+}
+
+button {
+	width: 100%;
+	height: 55px;
+	border-radius: 7px;
+	border: none;
+	background-color: hsl(0, 0%, 24%);
+	color: #fff;
+	font-size: 1.2rem;
+	cursor: pointer;
+	font-family: "Segoe UI Variable", Tahoma, Geneva, Verdana, sans-serif;
+}
+button:hover {
+	background-color: hsl(0, 0%, 20%);
+}
+
+.btndark {
+	background-color: hsl(0, 0%, 20%);
+}
+.btndark:hover {
+	background-color: hsl(0, 0%, 24%);
+}
+
+.btnlight {
+	background-color: hsl(0, 0%, 60%);
+	color: #383838;
+}
+
+.btnlight:hover {
+	background-color: hsl(0, 0%, 56%);
+	color: #383838;
+}
