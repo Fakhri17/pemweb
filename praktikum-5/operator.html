@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>Belajar JavaScript</title>
+  </head>
+  <body>
+    <h1>Belajar JavaScript: Operator</h1>
+    <script>
+      // Aritmatika
+      let foo;
+
+      foo = +100;
+      console.log(foo); // 100
+
+      foo = -22;
+      console.log(foo); // -22
+
+      foo = 30 + 5;
+      console.log(foo); // 35
+
+      foo = 3.33 + 9.02;
+      console.log(foo); // 12.35
+
+      foo = 9 * 7;
+      console.log(foo); // 63
+
+      foo = 9 ** 2;
+      console.log(foo); // 81
+
+      foo = 6 + 8 / 2 + 6;
+      console.log(foo); // 16
+
+      foo = 30 % 7;
+      console.log(foo); // 2
+
+      // Increment & Decrement
+      let val;
+
+      val = 7;
+      console.log(++val); // 8
+      console.log(val); // 8
+
+      val = 7;
+      console.log(val++); // 7
+      console.log(val); // 8
+
+      val = 7;
+      console.log(--val); // 6
+      console.log(val); // 6
+
+      val = 7;
+      console.log(foo--); // 7
+      console.log(val); // 6
+
+      // Spread Operator
+      let nilai1 = ["a", "b", "c", "d"];
+      console.log(nilai1); // Array [ "a", "b", "c", "d" ]
+
+      let nilai2 = [1, 2, 3, 4];
+      console.log(nilai2); // Array [ 1, 2, 3, 4 ]
+
+      let nilai3 = [...nilai1, "e", "f"];
+      console.log(nilai3); // Array [ "a", "b", "c", "d", "e", "f" ]
+
+      let nilai4 = [0, ...nilai2, 5, 6];
+      console.log(nilai4); // Array [ 0, 1, 2, 3, 4, 5, 6 ]
+
+      let nilai5 = [...nilai2, ...nilai3];
+      console.log(nilai5); // Array [ 1, 2, 3, 4, "a", "b", "c", "d", "e", "f" ]
+
+      // Spread Operator Object
+      let mahasiswa = {
+        nama: "Budi",
+        umur: 19,
+        jurusan: "Informatika",
+      };
+
+      let mahasiswa1 = {
+        ...mahasiswa,
+        umur: 20,
+        tempatLahir: "Surabaya",
+      };
+
+      console.log(mahasiswa1); // {nama: "Budi", umur: 20, jurusan: "Informatika", tempatLahir: "Surabaya"}
+    </script>
+  </body>
+</html>
