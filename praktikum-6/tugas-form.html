@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="./assets/form-style.css" />
+</head>
+
+<body>
+  <div class="card">
+    <div class="card-header">
+      <h1>Form Validation</h1>
+    </div>
+    <div class="card-body">
+      <form id="formKu" name="formKu" method="get">
+        <div class="col mb-3">
+          <div class="ms-2">
+            <label for="inputNama" class="form-label">Nama: </label>
+            <input type="text" name="nama" id="nama" class="form-control" />
+            <span id="namaSpan" class="form-error"></span>
+          </div>
+  
+          <div class="ms-2">
+            <label for="inputUsername" class="form-label">Username: </label>
+            <input type="text" name="username" id="username" class="form-control" />
+            <span id="usernameSpan" class="form-error"></span>
+          </div>
+        </div>
+        
+        <div class="col mb-3">
+          <div class="ms-2">
+            <label for="inputEmail" class="form-label">Email: </label>
+            <input type="email" name="email" id="email" class="form-control" />
+            <span id="emailSpan" class="form-error"></span>
+          </div>
+          
+          <div class="ms-2">
+            <label for="inputPassword" class="form-label">Password: </label>
+            <input type="password" name="pass" id="pass" class="form-control" autocomplete="" />
+            <span id="passSpan" class="form-error"></span>
+          </div>
+        </div>
+        
+        
+        <div class="mb-3">
+          <label for="inputKonfPass" class="form-label ">Konfirmasi Password: </label>
+          <input type="password" name="konfPass" id="konfPass" class="form-control" autocomplete="" />
+          <span id="konfPassSpan" class="form-error"></span>
+        </div>
+
+        <div class="mb-3">
+          <label for="inputNoTelp" class="form-label ">No. Telp: </label>
+          <input type="text" name="no_telp" id="no_telp" class="form-control" />
+          <span id="no_telpSpan" class="form-error"></span>
+        </div>
+
+        <div class="mb-3">
+          <label for="inputJenisKelamin" class="form-label">Jenis Kelamin: </label>
+          <select name="jenis_kelamin" id="jenis_kelamin" class="form-select">
+            <option selected>Pilih Jenis Kelamin</option>
+            <option value="laki-laki">Laki-laki</option>
+            <option value="perempuan">Perempuan</option>
+          </select>
+          <span id="jenis_kelaminSpan" class="form-error"></span>
+        </div>
+
+        <div class="mb-3">
+          <label for="inputAlamatWeb" class="form-label ">Alamat Web: </label>
+          <input type="url" name="alamat_web" id="alamat_web" class="form-control" />
+          <span id="alamat_webSpan" class="form-error"></span>
+        </div>
+
+        
+        <div class="mb-3">
+          <div class="form-check">
+            <input type="checkbox" name="syarat" id="syarat" class="form-check-input" />
+            <label for="inputSyarat" class="form-check-label">Saya setuju dengan syarat dan ketentuan yang berlaku</label>
+            <span id="syaratSpan" class="form-error"></span>
+          </div>
+          
+        </div>
+
+        <div class="mb-3">
+          <input type="submit" name="submit" id="submit" class="btn btn-primary" value="Kirim Data">
+        </div>
+        
+      </form>
+    </div>
+  </div>
+
+  <script src="./assets/form-script-refactor.js"></script>
+</body>
+
+</html>

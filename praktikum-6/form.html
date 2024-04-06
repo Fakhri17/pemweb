@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Form Validation</title>
+  <style>
+    .error {
+      color: red;
+      width: 300px;
+      text-align: center;
+      padding: 2px 10px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Belajar Javascript: Form Validation</h1>
+  <form id="formKu" name="formKu" method="get" action="proses.php">
+    <p>
+      Username: <input type="text" name="username" id="username" />
+      <span id="usernameSpan"></span>
+    </p>
+    <p>
+      Password: <input type="password" name="pass" id="pass" />
+      <span id="passSpan"></span>
+    </p>
+    <p>
+      Konfirmasi Password:
+      <input type="password" name="konfPass" id="konfPass" /><span id="konfPassSpan"></span>
+    </p>
+    <p>
+      <input type="checkbox" name="syarat" id="syarat" /> Saya menyetujui
+      syarat dan ketentuan<span id="syaratSpan"></span>
+    </p>
+    <p>
+      <input type="submit" name="submit" id="submit" value="Kirim Data" />
+    </p>
+  </form>
+  <script>
+    let formKuNode = document.getElementById("formKu");
+
+    let usernameNode = document.getElementById("username");
+    let usernameSpanNode = document.getElementById("usernameSpan");
+
+    let passNode = document.getElementById("pass");
+    let passSpanNode = document.getElementById("passSpan");
+
+    let konfPassNode = document.getElementById("konfPass");
+    let konfPassSpanNode = document.getElementById("konfPassSpan");
+
+    let syaratNode = document.getElementById("syarat");
+    let syaratSpanNode = document.getElementById("syaratSpan");
+
+    const diProses = (e) => {
+      //===== Untuk Validasi username ==== //
+      let usernameError = "";
+
+      if (usernameNode.value.trim() === "") {
+        usernameError = "Username harus diisi";
+      } else if (/\W/.test(usernameNode.value.trim())) {
+        usernameError = "Hanya bisa diisi karakter alfanumerik";
+      } else if (usernameNode.value.trim().length < 6) {
+        usernameError = "Username minimal 6 karakter";
+      }
+
+      if (usernameError !== "") {
+        usernameSpanNode.innerHTML = usernameError;
+        usernameSpanNode.className = "error";
+        usernameNode.style.border = "2px solid red";
+        e.preventDefault();
+      }
+
+      //===== Untuk Validasi Password ==== //
+      let passError = "";
+      if (passNode.value.trim() === "") {
+        passError = "Password harus diisi";
+      } else if (passNode.value.trim().length < 6) {
+        passError = "Password minimal 6 karakter";
+      }
+
+      if (passError !== "") {
+        passSpanNode.innerHTML = passError;
+        passSpanNode.className = "error";
+        passNode.style.border = "2px solid red";
+        e.preventDefault();
+      }
+
+      //===== Untuk Validasi Konfirmasi Password ==== //
+      let konfPassError = "";
+      if (konfPassNode.value.trim() === "") {
+        konfPassError = "Konfirmasi Password harus diisi";
+      } else if (konfPassNode.value.trim().length < 6) {
+        konfPassError = "Konfirmasi Password minimal 6 karakter";
+      } else if (konfPassNode.value !== passNode.value) {
+        konfPassError = "Konfirmasi Password tidak sama";
+      }
+
+      if (konfPassError !== "") {
+        konfPassSpanNode.innerHTML = konfPassError;
+        konfPassSpanNode.className = "error";
+        konfPassNode.style.border = "2px solid red";
+        e.preventDefault();
+      }
+
+      //===== Untuk Validasi Checkbox Syarat ==== //
+      let syaratError = "";
+      if (syaratNode.checked !== true) {
+        syaratError = "Syarat dan ketentuan harus di setujui";
+      }
+
+      if (syaratError !== "") {
+        syaratSpanNode.innerHTML = syaratError;
+        syaratSpanNode.className = "error";
+        e.preventDefault();
+      }
+    };
+
+    const hapusError = (e) => {
+      e.target.style.border = "";
+      e.target.parentElement.lastElementChild.innerHTML = "";
+    };
+
+    formKuNode.addEventListener("submit", diProses);
+    usernameNode.addEventListener("focus", hapusError);
+    passNode.addEventListener("focus", hapusError);
+    konfPassNode.addEventListener("focus", hapusError);
+    syaratNode.addEventListener("focus", hapusError);
+  </script>
+</body>
+
+</html>

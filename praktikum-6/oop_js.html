@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Object Oriented Programming (OOP)</title>
+</head>
+
+<body>
+  <h1>Belajar Javascript: Object Oriented Programming (OOP)</h1>
+  <script>
+    // Javascript Class
+    class Mobil {
+      constructor(nama, tipe, harga) {
+        this.nama = nama;
+        this.tipe = tipe;
+        this.harga = harga;
+      }
+  
+      hidupkan() {
+        return `Mesin ${this.nama} dihidupkan`;
+      }
+  
+      pergi(tempat) {
+        return `Pergi ke ${tempat} dengan ${this.nama}`;
+      }
+    }
+    let mobilAndi = new Mobil("Daihatsu Xenia", "MPV", 220000000);
+    console.log("Nama Mobil Andi: ", mobilAndi.nama);
+    console.log("Mobil Andi Pergi: ", mobilAndi.pergi("Jakarta"));
+    let mobilJoko = new Mobil("Toyota Camry", "Sedan", 750000000);
+    console.log("Nama Mobil Joko: ", mobilJoko.nama);
+    console.log("Mobil Joko Pergi: ", mobilJoko.pergi("Bali"));
+  </script>
+</body>
+
+
+</html>

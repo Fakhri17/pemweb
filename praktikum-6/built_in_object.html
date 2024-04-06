@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number, Math, String, Array</title>
+  </head>
+  <body>
+    <h1>Belajar Javascript: Number, Math, String, Array</h1>
+    <script>
+      // Number Static Property & Static Method
+      console.log("Max Value: ", Number.MAX_VALUE);
+      console.log('Is "A" integer? ', Number.isInteger("A"));
+      console.log("Is 12 integer? ", Number.isInteger(12));
+  
+      // Number Object Instance Method
+      let foo = new Number(5.123456);
+      console.log("toPrecision : ", foo.toPrecision(3));
+  
+      // Math Static Property
+      console.log("Math.E = " + Math.E); // 2.718281828459045
+      console.log("Math.LN10 = " + Math.LN10); // 2.302585092994046
+      console.log("Math.LN2 = " + Math.LN2); // 0.6931471805599453
+      console.log("Math.LOG10E = " + Math.LOG10E); // 0.4342944819032518
+      console.log("Math.LOG2E = " + Math.LOG2E); // 1.4426950408889634
+      console.log("Math.PI = " + Math.PI); // 3.141592653589793
+      console.log("Math.SQRT1_2 = " + Math.SQRT1_2); // 0.7071067811865476
+      console.log("Math.SQRT2 = " + Math.SQRT2); // 1.4142135623730951
+  
+      // Math Static Method
+      let num = 12.5;
+      console.log("Floor: ", Math.floor(num)); // 12
+      console.log("Ceil: ", Math.ceil(num)); // 13
+      console.log("Round: ", Math.round(num)); // 13
+      console.log("Random: ", Math.random());
+      console.log("Pow: ", Math.pow(5, 2)); // 25
+      console.log("Pow: ", Math.pow(2, 8)); // 256
+  
+      // String Object Instance Property & Method
+      let text = new String("Selamat Belajar JavaScript");
+      console.log("String length: ", text.length);
+      console.log("Lowercase: : ", text.toLowerCase());
+      console.log("Uppercase: : ", text.toUpperCase());
+  
+      // Array Static Method
+      let a = new Array("a", "b", "c", "d", "e");
+      let b = ["a", "b", "c", "d", "e"];
+      let c = "aiueo";
+      let d = 123456;
+      let e = true;
+      console.log("A: ", Array.isArray(a)); // true
+      console.log("B: ", Array.isArray(b)); // true
+      console.log("C: ", Array.isArray(c)); // false
+      console.log("D: ", Array.isArray(d)); // false
+      console.log("E: ", Array.isArray(e)); // false
+      console.log("isArray: ", Array.isArray([1, 2, 3])); // true
+  
+      // Array Instance Property
+      let arr = ["a", "b", "c", "d", "e"];
+      console.log("Arr length: ", arr.length); // 5
+      let arr2 = ["apel", "pisang", "anggur", "jambu"];
+      console.log("Arr2 length: ", arr2.length); // 4
+      console.log("Array length: ", ["x", "y", "z"].length); // 3
+  
+      // Array For Each
+      let arr3 = ["a", "b", "c", "d", "e"];
+      arr3.forEach(function (element) {
+        console.log("Arr3 element: ", element);
+      });
+      arr3.forEach((element) =>
+        console.log("Arr3 element from Arrow: ", element)
+      );
+    </script>
+  </body>
+  
+</html>

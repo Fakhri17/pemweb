@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>AJAX</title>
+  </head>
+  <body>
+    <h1>Belajar Javascript: Asynchronous Javascript and XML (AJAX)</h1>
+    <button id="tombol">Ambil Data</button>
+    <p>Hasil: <span id="hasil"></span></p>
+    <script>
+      let tombolNode = document.getElementById("tombol");
+      let hasilNode = document.getElementById("hasil");
+
+      const getAJAX = () => {
+        let request = new XMLHttpRequest();
+        request.open("GET", "salam.txt", false);
+        request.send();
+        hasilNode.innerHTML = request.responseText;
+      };
+
+      tombolNode.addEventListener("click", getAJAX);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Property dan Function</title>
+  </head>
+  <body>
+    <h1>Belajar Javascript: Global Property dan Function</h1>
+    <script>
+      // Global Property
+      let nan = NaN;
+      console.log("nan: ", nan); // NaN
+      let infinity = Infinity;
+      console.log("infinity: ", infinity); // Infinity
+      let undfn = undefined;
+      console.log("undfn", undfn); // undefined
+      let n = null;
+      console.log("n: ", n); // null
+  
+      // Global Function
+      let foo = "1234.567";
+      console.log("parseInt: ", parseInt(foo)); // 1234
+      console.log("parseInt: ", parseInt(99.99)); // 99
+      let foo2 = "1234";
+      console.log("Type of foo2: ", typeof foo2); // string
+      foo2 = parseFloat(foo2);
+      console.log("foo2: ", foo2); // 1234
+      console.log("Type of foo2: ", typeof foo2); // number
+    </script>
+  </body>
+  
+</html>
